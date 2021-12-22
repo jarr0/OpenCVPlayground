@@ -1,0 +1,28 @@
+.no_image {
+  margin: 30px 30px;
+  border: 4px dashed rgb(0, 0, 0);
+  border-radius: 6px;
+  height: calc(100% - 60px);
+  background-color: var(--tertiary-colour);
+  padding: 0;
+}
+
+.no_image:hover {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  border: 4px dashed var(--primary-colour);
+  transform: scale(1.02);
+}
+
+.no_image button {
+  height: 100%;
+  width: 100%;
+  font-size: 1.3em;
+  font-family: "Poppins";
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.no_image input {
+  display: none;
+}

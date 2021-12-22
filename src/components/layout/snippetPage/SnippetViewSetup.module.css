@@ -1,0 +1,13 @@
+.setup {
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 17em 25em auto;
+  grid-template-rows: 35em;
+  grid-gap: 10px;
+  width: 100%;
+}
+
+.setup div {
+  /* min-height: 100%; */
+  max-height: 100%;
+}

@@ -1,0 +1,395 @@
+[
+  {
+    "name": "BorderTypes",
+    "enums": [
+      { "name": "BORDER_CONSTANT", "code": "0" },
+      { "name": "BORDER_REPLICATE", "code": "1" },
+      { "name": "BORDER_REFLECT", "code": "2" },
+      { "name": "BORDER_WRAP", "code": "3" },
+      {
+        "name": "BORDER_REFLECT_101",
+        "code": "4",
+        "equivalent": ["BORDER_REFLECT101", "BORDER_DEFAULT"]
+      },
+      { "name": "BORDER_TRANSPARENT", "code": "5" },
+      { "name": "BORDER_ISOLATED", "code": "16" }
+    ]
+  },
+  {
+    "name": "ColorConversionCodes",
+    "enums": [
+      {
+        "name": "COLOR_BGR2BGRA",
+        "code": "0",
+        "equivalent": ["COLOR_RGB2RGBA"]
+      },
+      {
+        "name": "COLOR_BGRA2BGR",
+        "code": "1",
+        "equivalent": ["COLOR_RGBA2RGB"]
+      },
+      {
+        "name": "COLOR_BGR2RGBA",
+        "code": "2",
+        "equivalent": ["COLOR_RGB2BGRA"]
+      },
+      {
+        "name": "COLOR_RGBA2BGR",
+        "code": "3",
+        "equivalent": ["COLOR_BGRA2RGB"]
+      },
+      { "name": "COLOR_BGR2RGB", "code": "4", "equivalent": ["COLOR_RGB2BGR"] },
+      {
+        "name": "COLOR_BGRA2RGBA",
+        "code": "5",
+        "equivalent": ["COLOR_RGBA2BGRA"]
+      },
+      { "name": "COLOR_BGR2GRAY", "code": "6" },
+      { "name": "COLOR_RGB2GRAY", "code": "7" },
+      {
+        "name": "COLOR_GRAY2BGR",
+        "code": "8",
+        "equivalent": ["COLOR_GRAY2RGB"]
+      },
+      {
+        "name": "COLOR_GRAY2BGRA",
+        "code": "9",
+        "equivalent": ["COLOR_GRAY2RGBA"]
+      },
+      { "name": "COLOR_BGRA2GRAY", "code": "10" },
+      { "name": "COLOR_RGBA2GRAY", "code": "11" },
+      { "name": "COLOR_BGR2BGR565", "code": "12" },
+      { "name": "COLOR_RGB2BGR565", "code": "13" },
+      { "name": "COLOR_BGR5652BGR", "code": "14" },
+      { "name": "COLOR_BGR5652RGB", "code": "15" },
+      { "name": "COLOR_BGRA2BGR565", "code": "16" },
+      { "name": "COLOR_RGBA2BGR565", "code": "17" },
+      { "name": "COLOR_BGR5652BGRA", "code": "18" },
+      { "name": "COLOR_BGR5652RGBA", "code": "19" },
+      { "name": "COLOR_GRAY2BGR565", "code": "20" },
+      { "name": "COLOR_BGR5652GRAY", "code": "21" },
+      { "name": "COLOR_BGR2BGR555", "code": "22" },
+      { "name": "COLOR_RGB2BGR555", "code": "23" },
+      { "name": "COLOR_BGR5552BGR", "code": "24" },
+      { "name": "COLOR_BGR5552RGB", "code": "25" },
+      { "name": "COLOR_BGRA2BGR555", "code": "26" },
+      { "name": "COLOR_RGBA2BGR555", "code": "27" },
+      { "name": "COLOR_BGR5552BGRA", "code": "28" },
+      { "name": "COLOR_BGR5552RGBA", "code": "29" },
+      { "name": "COLOR_GRAY2BGR555", "code": "30" },
+      { "name": "COLOR_BGR5552GRAY", "code": "31" },
+      { "name": "COLOR_BGR2XYZ", "code": "32" },
+      { "name": "COLOR_RGB2XYZ", "code": "33" },
+      { "name": "COLOR_XYZ2BGR", "code": "34" },
+      { "name": "COLOR_XYZ2RGB", "code": "35" },
+      { "name": "COLOR_BGR2YCrCb", "code": "36" },
+      { "name": "COLOR_RGB2YCrCb", "code": "37" },
+      { "name": "COLOR_YCrCb2BGR", "code": "38" },
+      { "name": "COLOR_YCrCb2RGB", "code": "39" },
+      { "name": "COLOR_BGR2HSV", "code": "40" },
+      { "name": "COLOR_RGB2HSV", "code": "41" },
+      { "name": "COLOR_BGR2Lab", "code": "44" },
+      { "name": "COLOR_RGB2Lab", "code": "45" },
+      { "name": "COLOR_BGR2Luv", "code": "50" },
+      { "name": "COLOR_RGB2Luv", "code": "51" },
+      { "name": "COLOR_BGR2HLS", "code": "52" },
+      { "name": "COLOR_RGB2HLS", "code": "53" },
+      { "name": "COLOR_HSV2BGR", "code": "54" },
+      { "name": "COLOR_HSV2RGB", "code": "55" },
+      { "name": "COLOR_Lab2BGR", "code": "56" },
+      { "name": "COLOR_Lab2RGB", "code": "57" },
+      { "name": "COLOR_Luv2BGR", "code": "58" },
+      { "name": "COLOR_Luv2RGB", "code": "59" },
+      { "name": "COLOR_HLS2BGR", "code": "60" },
+      { "name": "COLOR_HLS2RGB", "code": "61" },
+      { "name": "COLOR_BGR2HSV_FULL", "code": "66" },
+      { "name": "COLOR_RGB2HSV_FULL", "code": "67" },
+      { "name": "COLOR_BGR2HLS_FULL", "code": "68" },
+      { "name": "COLOR_RGB2HLS_FULL", "code": "69" },
+      { "name": "COLOR_HSV2BGR_FULL", "code": "70" },
+      { "name": "COLOR_HSV2RGB_FULL", "code": "71" },
+      { "name": "COLOR_HLS2BGR_FULL", "code": "72" },
+      { "name": "COLOR_HLS2RGB_FULL", "code": "73" },
+      { "name": "COLOR_LBGR2Lab", "code": "74" },
+      { "name": "COLOR_LRGB2Lab", "code": "75" },
+      { "name": "COLOR_LBGR2Luv", "code": "76" },
+      { "name": "COLOR_LRGB2Luv", "code": "77" },
+      { "name": "COLOR_Lab2LBGR", "code": "78" },
+      { "name": "COLOR_Lab2LRGB", "code": "79" },
+      { "name": "COLOR_Luv2LBGR", "code": "80" },
+      { "name": "COLOR_Luv2LRGB", "code": "81" },
+      { "name": "COLOR_BGR2YUV", "code": "82" },
+      { "name": "COLOR_RGB2YUV", "code": "83" },
+      { "name": "COLOR_YUV2BGR", "code": "84" },
+      { "name": "COLOR_YUV2RGB", "code": "85" },
+      { "name": "//!", "code": "4:2:0" },
+      { "name": "COLOR_YUV2RGB_NV12", "code": "90" },
+      { "name": "COLOR_YUV2BGR_NV12", "code": "91" },
+      {
+        "name": "COLOR_YUV2RGB_NV21",
+        "code": "92",
+        "equivalent": ["COLOR_YUV420sp2RGB"]
+      },
+      {
+        "name": "COLOR_YUV2BGR_NV21",
+        "code": "93",
+        "equivalent": ["COLOR_YUV420sp2BGR"]
+      },
+      { "name": "COLOR_YUV2RGBA_NV12", "code": "94" },
+      { "name": "COLOR_YUV2BGRA_NV12", "code": "95" },
+      {
+        "name": "COLOR_YUV2RGBA_NV21",
+        "code": "96",
+        "equivalent": ["COLOR_YUV420sp2RGBA"]
+      },
+      {
+        "name": "COLOR_YUV2BGRA_NV21",
+        "code": "97",
+        "equivalent": ["COLOR_YUV420sp2BGRA"]
+      },
+      {
+        "name": "COLOR_YUV2RGB_YV12",
+        "code": "98",
+        "equivalent": ["COLOR_YUV420p2RGB"]
+      },
+      {
+        "name": "COLOR_YUV2BGR_YV12",
+        "code": "99",
+        "equivalent": ["COLOR_YUV420p2BGR"]
+      },
+      {
+        "name": "COLOR_YUV2RGB_IYUV",
+        "code": "100",
+        "equivalent": ["COLOR_YUV2RGB_I420"]
+      },
+      {
+        "name": "COLOR_YUV2BGR_IYUV",
+        "code": "101",
+        "equivalent": ["COLOR_YUV2BGR_I420"]
+      },
+      {
+        "name": "COLOR_YUV2RGBA_YV12",
+        "code": "102",
+        "equivalent": ["COLOR_YUV420p2RGBA"]
+      },
+      {
+        "name": "COLOR_YUV2BGRA_YV12",
+        "code": "103",
+        "equivalent": ["COLOR_YUV420p2BGRA"]
+      },
+      {
+        "name": "COLOR_YUV2RGBA_IYUV",
+        "code": "104",
+        "equivalent": ["COLOR_YUV2RGBA_I420"]
+      },
+      {
+        "name": "COLOR_YUV2BGRA_IYUV",
+        "code": "105",
+        "equivalent": ["COLOR_YUV2BGRA_I420"]
+      },
+      {
+        "name": "COLOR_YUV2GRAY_420",
+        "code": "106",
+        "equivalent": [
+          "COLOR_YUV2GRAY_NV21",
+          "COLOR_YUV2GRAY_NV12",
+          "COLOR_YUV2GRAY_YV12",
+          "COLOR_YUV2GRAY_IYUV",
+          "COLOR_YUV2GRAY_I420",
+          "COLOR_YUV420sp2GRAY",
+          "COLOR_YUV420p2GRAY"
+        ]
+      },
+      {
+        "name": "COLOR_YUV2RGB_UYVY",
+        "code": "107",
+        "equivalent": ["COLOR_YUV2RGB_Y422", "COLOR_YUV2RGB_UYNV"]
+      },
+      {
+        "name": "COLOR_YUV2BGR_UYVY",
+        "code": "108",
+        "equivalent": ["COLOR_YUV2BGR_Y422", "COLOR_YUV2BGR_UYNV"]
+      },
+      { "name": "//COLOR_YUV2RGB_VYUY", "code": "109" },
+      { "name": "//COLOR_YUV2BGR_VYUY", "code": "110" },
+      {
+        "name": "COLOR_YUV2RGBA_UYVY",
+        "code": "111",
+        "equivalent": ["COLOR_YUV2RGBA_Y422", "COLOR_YUV2RGBA_UYNV"]
+      },
+      {
+        "name": "COLOR_YUV2BGRA_UYVY",
+        "code": "112",
+        "equivalent": ["COLOR_YUV2BGRA_Y422", "COLOR_YUV2BGRA_UYNV"]
+      },
+      { "name": "//COLOR_YUV2RGBA_VYUY", "code": "113" },
+      { "name": "//COLOR_YUV2BGRA_VYUY", "code": "114" },
+      {
+        "name": "COLOR_YUV2RGB_YUY2",
+        "code": "115",
+        "equivalent": ["COLOR_YUV2RGB_YUYV", "COLOR_YUV2RGB_YUNV"]
+      },
+      {
+        "name": "COLOR_YUV2BGR_YUY2",
+        "code": "116",
+        "equivalent": ["COLOR_YUV2BGR_YUYV", "COLOR_YUV2BGR_YUNV"]
+      },
+      { "name": "COLOR_YUV2RGB_YVYU", "code": "117" },
+      { "name": "COLOR_YUV2BGR_YVYU", "code": "118" },
+      {
+        "name": "COLOR_YUV2RGBA_YUY2",
+        "code": "119",
+        "equivalent": ["COLOR_YUV2RGBA_YUYV", "COLOR_YUV2RGBA_YUNV"]
+      },
+      {
+        "name": "COLOR_YUV2BGRA_YUY2",
+        "code": "120",
+        "equivalent": ["COLOR_YUV2BGRA_YUYV", "COLOR_YUV2BGRA_YUNV"]
+      },
+      { "name": "COLOR_YUV2RGBA_YVYU", "code": "121" },
+      { "name": "COLOR_YUV2BGRA_YVYU", "code": "122" },
+      {
+        "name": "COLOR_YUV2GRAY_UYVY",
+        "code": "123",
+        "equivalent": ["COLOR_YUV2GRAY_Y422", "COLOR_YUV2GRAY_UYNV"]
+      },
+      {
+        "name": "COLOR_YUV2GRAY_YUY2",
+        "code": "124",
+        "equivalent": [
+          "COLOR_YUV2GRAY_YVYU",
+          "COLOR_YUV2GRAY_YUYV",
+          "COLOR_YUV2GRAY_YUNV"
+        ]
+      },
+      { "name": "//CV_YUV2GRAY_VYUY", "code": "CV_YUV2GRAY_UYVY" },
+      { "name": "COLOR_RGBA2mRGBA", "code": "125" },
+      { "name": "COLOR_mRGBA2RGBA", "code": "126" },
+      {
+        "name": "COLOR_RGB2YUV_I420",
+        "code": "127",
+        "equivalent": ["COLOR_RGB2YUV_IYUV"]
+      },
+      {
+        "name": "COLOR_BGR2YUV_I420",
+        "code": "128",
+        "equivalent": ["COLOR_BGR2YUV_IYUV"]
+      },
+      {
+        "name": "COLOR_RGBA2YUV_I420",
+        "code": "129",
+        "equivalent": ["COLOR_RGBA2YUV_IYUV"]
+      },
+      {
+        "name": "COLOR_BGRA2YUV_I420",
+        "code": "130",
+        "equivalent": ["COLOR_BGRA2YUV_IYUV"]
+      },
+      { "name": "COLOR_RGB2YUV_YV12", "code": "131" },
+      { "name": "COLOR_BGR2YUV_YV12", "code": "132" },
+      { "name": "COLOR_RGBA2YUV_YV12", "code": "133" },
+      { "name": "COLOR_BGRA2YUV_YV12", "code": "134" },
+      {
+        "name": "COLOR_BayerBG2BGR",
+        "code": "46",
+        "equivalent": ["COLOR_BayerRGGB2BGR", "COLOR_BayerRG2RGB"]
+      },
+      {
+        "name": "COLOR_BayerGB2BGR",
+        "code": "47",
+        "equivalent": ["COLOR_BayerGRBG2BGR", "COLOR_BayerGR2RGB"]
+      },
+      {
+        "name": "COLOR_BayerRG2BGR",
+        "code": "48",
+        "equivalent": ["COLOR_BayerBGGR2BGR", "COLOR_BayerBG2RGB"]
+      },
+      {
+        "name": "COLOR_BayerGR2BGR",
+        "code": "49",
+        "equivalent": ["COLOR_BayerGBRG2BGR", "COLOR_BayerGB2RGB"]
+      },
+      {
+        "name": "COLOR_BayerBG2GRAY",
+        "code": "86",
+        "equivalent": ["COLOR_BayerRGGB2GRAY"]
+      },
+      {
+        "name": "COLOR_BayerGB2GRAY",
+        "code": "87",
+        "equivalent": ["COLOR_BayerGRBG2GRAY"]
+      },
+      {
+        "name": "COLOR_BayerRG2GRAY",
+        "code": "88",
+        "equivalent": ["COLOR_BayerBGGR2GRAY"]
+      },
+      {
+        "name": "COLOR_BayerGR2GRAY",
+        "code": "89",
+        "equivalent": ["COLOR_BayerGBRG2GRAY"]
+      },
+      {
+        "name": "COLOR_BayerBG2BGR_VNG",
+        "code": "62",
+        "equivalent": ["COLOR_BayerRGGB2BGR_VNG", "COLOR_BayerRG2RGB_VNG"]
+      },
+      {
+        "name": "COLOR_BayerGB2BGR_VNG",
+        "code": "63",
+        "equivalent": ["COLOR_BayerGRBG2BGR_VNG", "COLOR_BayerGR2RGB_VNG"]
+      },
+      {
+        "name": "COLOR_BayerRG2BGR_VNG",
+        "code": "64",
+        "equivalent": ["COLOR_BayerBGGR2BGR_VNG", "COLOR_BayerBG2RGB_VNG"]
+      },
+      {
+        "name": "COLOR_BayerGR2BGR_VNG",
+        "code": "65",
+        "equivalent": ["COLOR_BayerGBRG2BGR_VNG", "COLOR_BayerGB2RGB_VNG"]
+      },
+      {
+        "name": "COLOR_BayerBG2BGR_EA",
+        "code": "135",
+        "equivalent": ["COLOR_BayerRGGB2BGR_EA", "COLOR_BayerRG2RGB_EA"]
+      },
+      {
+        "name": "COLOR_BayerGB2BGR_EA",
+        "code": "136",
+        "equivalent": ["COLOR_BayerGRBG2BGR_EA", "COLOR_BayerGR2RGB_EA"]
+      },
+      {
+        "name": "COLOR_BayerRG2BGR_EA",
+        "code": "137",
+        "equivalent": ["COLOR_BayerBGGR2BGR_EA", "COLOR_BayerBG2RGB_EA"]
+      },
+      {
+        "name": "COLOR_BayerGR2BGR_EA",
+        "code": "138",
+        "equivalent": ["COLOR_BayerGBRG2BGR_EA", "COLOR_BayerGB2RGB_EA"]
+      },
+      {
+        "name": "COLOR_BayerBG2BGRA",
+        "code": "139",
+        "equivalent": ["COLOR_BayerRGGB2BGRA", "COLOR_BayerRG2RGBA"]
+      },
+      {
+        "name": "COLOR_BayerGB2BGRA",
+        "code": "140",
+        "equivalent": ["COLOR_BayerGRBG2BGRA", "COLOR_BayerGR2RGBA"]
+      },
+      {
+        "name": "COLOR_BayerRG2BGRA",
+        "code": "141",
+        "equivalent": ["COLOR_BayerBGGR2BGRA", "COLOR_BayerBG2RGBA"]
+      },
+      {
+        "name": "COLOR_BayerGR2BGRA",
+        "code": "142",
+        "equivalent": ["COLOR_BayerGBRG2BGRA", "COLOR_BayerGB2RGBA"]
+      },
+      { "name": "COLOR_COLORCVT_MAX", "code": "143" }
+    ]
+  }
+]

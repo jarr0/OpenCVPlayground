@@ -1,0 +1,30 @@
+[
+  {
+    "id": "f9b327e70bbcf42494ccb28b2d98e00e",
+    "title": "cvtColor",
+    "desc": "Converts an image from one color space to another",
+    "docs": "https://docs.opencv.org/3.4/d8/d01/group__imgproc__color__conversions.html#ga397ae87e1288a81d2363b61574eb8cab",
+    "args": [
+      {
+        "type": "dropdown",
+        "prefix": "COLOR_",
+        "docs": "https://docs.opencv.org/3.4/d8/d01/group__imgproc__color__conversions.html#ga4e0972be5de079fed4e3a10e24ef5ef0"
+      }
+    ]
+  },
+
+  {
+    "id": "f9b327e70bbcf42494ccb28b2d98e01e",
+    "title": "Canny",
+    "desc": "Finds edges in an image using the Canny algorithm",
+    "docs": "https://docs.opencv.org/3.4/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de",
+    "args": [
+      {
+        "type": "range",
+        "code": "cv.Canny()",
+        "min": 0,
+        "max": 255
+      }
+    ]
+  }
+]

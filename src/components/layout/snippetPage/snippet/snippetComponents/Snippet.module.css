@@ -1,0 +1,59 @@
+.snippet {
+  margin: .3em .3em;
+  padding: .1em;
+  width: auto;
+  height: auto;
+}
+
+.library_snippet {
+  background-color: var(--secondary-colour);
+  border-radius: 6px;
+}
+
+.selected_snippet {
+  background-color: white;
+  border-radius: 6px;
+}
+
+.snippet:hover {
+  background-color: white;
+  transform: scale(1.02);
+}
+
+.header h2 {
+  margin: 0;
+  padding: 2px 0 2px 4px;
+  font-size: 1.1em;
+  color: black;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header ul {
+  display: flex;
+}
+
+.header img {
+  padding: 2px;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+.library_controls img {
+  margin-right: 16px;
+}
+
+.header img:hover{
+  transform: scale(1.15);
+}
+
+.snippet p {
+  margin: 0;
+  padding: 5px;
+  font-size: .8em;
+  color: black;
+}

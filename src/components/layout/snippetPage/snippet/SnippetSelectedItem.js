@@ -1,34 +1,38 @@
-import { Snippet, SnippetHeader, SnippetSlider } from "./snippetComponents";
+import { Snippet, SnippetHeader } from "./snippetComponents";
 import classes from "./snippetComponents/Snippet.module.css";
 
-import { SnippetDropdown } from './snippetComponents/selectedSnippetParts'
-
-import data from "../snippetData/function_data.json";
+import {
+  SnippetDropdown,
+  SnippetSlider,
+  SnippetBoolean,
+} from "./snippetComponents/selectedSnippetParts";
 
 function SnippetSelectedItem(props) {
-  var content
+  const params = props.item.signature;
 
-  const params = props.item.signature
-
-  const children = []
+  const children = [];
   params.map((param) => {
-    const part = param.var_type.split(':')[0]
+    const part = param.var_type.split(":")[0];
 
-    if (part === 'InputArray' | part === 'OutputArray' | part === 'dropdown' ) {
-      console.log('adding')
-      children.push(SnippetDropdown(props))
+    const argID = [props.item.selected_id, param.param_no].join('#')
+
+    if (part === "dropdown") {
+      children.push(SnippetDropdown({argID, ...param}));
+    } else if (part === "int" || part === "float") {
+      children.push(SnippetSlider(param));
+    } else if (part === "bool") {
+      children.push(SnippetBoolean(param));
     }
-  })
+  });
 
   return (
     <Snippet className={classes.library_snippet}>
       <div className={classes.selected_snippet}>
         <SnippetHeader type="selected" item={props.item} />
-        {children}
+        <div className={classes.snippet_vars}>{children}</div>
       </div>
     </Snippet>
-  )
+  );
 }
 
-export default SnippetSelectedItem
-
+export default SnippetSelectedItem;

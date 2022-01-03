@@ -1,7 +1,6 @@
 import classes from "./Snippet.module.css";
 
 import SnippetHeader from "./SnippetHeader";
-import SnippetSlider from "./SnippetSlider";
 
 function Snippet(props) {
   return (

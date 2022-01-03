@@ -1,6 +1,6 @@
 .snippet {
-  margin: .3em .3em;
-  padding: .1em;
+  margin: 2px 3px;
+  padding: 2px;
   width: auto;
   height: auto;
 }
@@ -13,12 +13,21 @@
 .selected_snippet {
   background-color: white;
   border-radius: 6px;
+  padding: 1px 0px;
 }
 
-.snippet:hover {
+.snippet_vars {
+  box-shadow: inset 0 0 8px #6969695b;
+  margin: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: var(--tertiary-colour);
+}
+
+/* .snippet:hover {
   background-color: white;
   transform: scale(1.02);
-}
+} */
 
 .header h2 {
   margin: 0;
@@ -57,3 +66,5 @@
   font-size: .8em;
   color: black;
 }
+
+

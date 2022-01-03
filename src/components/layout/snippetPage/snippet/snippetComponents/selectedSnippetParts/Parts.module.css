@@ -1,0 +1,57 @@
+.arg_setup {
+  background-color: white;
+  margin: 3px 1px;
+  padding: 3px;
+  border-radius: 6px; 
+  border: 2px solid var(--primary-colour); 
+}
+
+.arg_setup h3{
+  font-size: 1.05em;
+  padding: 0px;
+  margin: 3px;
+  line-height: 100%;
+}
+
+.arg_setup ul {
+  align-items: center;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.boolean {
+}
+
+.boolean input {
+
+  position: relative;
+  top: 0;
+}
+
+.dropdown select {
+  font-size: 0.8em;
+  width: 10em;
+}
+
+.slider ul {
+  align-items:center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider input[type=range] {
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.slider input[type=number] {
+  font-size: 0.8em;
+  margin: 3px;
+  width: 3em;
+  height: 1.8em;
+}
+

@@ -10,9 +10,6 @@ function SnippetsLibrary(props) {
 
   function librarySnippetClickedHandler(id) {
     selectedContext.addSelected(id)
-
-    console.log(`item cliked: ${id}`);
-    console.log(`total count: ${selectedContext.selected.length}`)
   }
 
   return (

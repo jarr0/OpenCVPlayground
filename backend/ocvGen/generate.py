@@ -19,7 +19,7 @@ beginning = [
   'import CustomException as ce\n\n',]
 
 ending = [
-  '\t\tcv.imwrite(\'./custom.jpg\', img)\n',
+  '\t\tcv.imwrite(\'./ocvGen/temp/custom.jpg\', img)\n',
   '\texcept ce.CustomFunctionException as e:\n',
   '\t\tprint(e)\n',
   '\t\tsys.exit(1)\n',
@@ -38,12 +38,12 @@ img_dest = [
 ]
 
 def generate_code():
-  fp = open('./ocvGen/code.py', 'a')
+  fp = open('./ocvGen/temp/generated_code.py', 'a')
   fp.truncate(0)
   
   fp.writelines(beginning)
   
-  with open('./ocvGen/data.json') as jsonFile:
+  with open('./ocvGen/temp/data.json') as jsonFile:
     funcs = json.load(jsonFile)
     jsonFile.close()
         
@@ -51,7 +51,7 @@ def generate_code():
   
   fp.writelines([
     'def run_script():\n',
-    '\timg = cv.imread(\'./base_image.jpg\')\n\n',
+    '\timg = cv.imread(\'./ocvGen/temp/base_image.jpg\')\n\n',
     '\ttry:\n',
   ])
   
@@ -61,7 +61,7 @@ def generate_code():
   fp.writelines(ending)
     
 def add_images(fp):
-  fp.write("img = cv.imread('./image.jpg')\n\n")
+  fp.write("img = cv.imread('./ocvGen/temp/image.jpg')\n\n")
 
 def add_funcs(fp, funcs):
   internal_func_names = list()
@@ -85,7 +85,7 @@ def add_funcs(fp, funcs):
     fp.writelines(final_func)
   return internal_func_names      
   
-def generate_func(func) -> str:
+def generate_func(func):
   formatted_func = 'cv.' + func['func_name'] + '('
   
   for param in func['signature']:
@@ -99,11 +99,11 @@ def generate_func(func) -> str:
     
   return (formatted_func[:-2] + ')')
     
-def gen_internal_func_name() -> str:
+def gen_internal_func_name():
   return ''.join(random.choices(string.ascii_lowercase, k=10))
 
 def add_functions(fp):
-  with open('./ocvGen/data.json') as jsonFile:
+  with open('./ocvGen/temp/data.json') as jsonFile:
     funcs = json.load(jsonFile)
     jsonFile.close
     

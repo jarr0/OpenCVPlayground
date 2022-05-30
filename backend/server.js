@@ -56,7 +56,7 @@ var imageStorage = multer.diskStorage({
     cb(null, ".")
   },
   filename: (req, file, cb) => {
-    cb(null, "base_image.jpg")
+    cb(null, "ocvGen/temp/base_image.jpg")
   },
 })
 
@@ -70,10 +70,10 @@ var jsonStorage = multer.diskStorage({
 })
 
 app.get("/get_config", (req, res) => {
-  configExists = fs.existsSync("./ocvGen/data.json")
+  configExists = fs.existsSync("./ocvGen/temp/data.json")
 
   if (configExists) {
-    const config = fs.createReadStream("ocvGen/data.json")
+    const config = fs.createReadStream("ocvGen/temp/data.json")
     config.pipe(res)
   } else {
     res.sendStatus(204)
@@ -84,17 +84,17 @@ var imageUpload = multer({ storage: imageStorage }).single("file")
 var jsonUpload = multer({ storage: jsonStorage }).single("file")
 
 app.get("/get_image", (req, res) => {
-  customImageExists = fs.existsSync("./custom.jpg")
-  imageExists = fs.existsSync("./base_image.jpg")
+  customImageExists = fs.existsSync("./ocvGen/temp/custom.jpg")
+  imageExists = fs.existsSync("./ocvGen/temp/base_image.jpg")
 
 
   if (customImageExists) {
     // when the base image has been edited
-    res.sendFile("custom.jpg", { root: __dirname })
+    res.sendFile("ocvGen/temp/custom.jpg", { root: __dirname })
   } else {
     // only if image has been uploaded, but not modified
     if (imageExists) {
-      res.sendFile("base_image.jpg", { root: __dirname })
+      res.sendFile("ocvGen/temp/base_image.jpg", { root: __dirname })
     } else {
       res.status(204)
       res.send()
@@ -125,7 +125,7 @@ var fs = require("fs")
 app.post("/refresh_image", async (req, res) => {
   let data = JSON.stringify(req.body)
 
-  fs.writeFile("./ocvGen/data.json", data, (err) => {
+  fs.writeFile("./ocvGen/temp/data.json", data, (err) => {
     if (err) {
       console.log(err)
     } else {

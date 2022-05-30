@@ -22,6 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/.vscode
-/backend/ocvGen/__pycache__
-/backend/ocvGen/*.jpg
+
+/backend/ocvGen/temp/*
+__pycache__
+
+*.jpg
+*.pyc

@@ -1,7 +1,5 @@
 import classes from "./Snippet.module.css";
 
-import SnippetHeader from "./SnippetHeader";
-
 function Snippet(props) {
   return (
     <li id={props} > 

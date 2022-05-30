@@ -1,11 +1,10 @@
 import classes from "./NoImage.module.css";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import * as fs from 'fs';
 
 import loading_icon from "../../../../images/loading.svg";
 
-function NoImage() {
+function NoImage(props) {
   var [selectedImage, setSelectedImage] = useState(null);
   const [uploadingProgress, setUploadingProgress] = useState(null);
 
@@ -21,10 +20,11 @@ function NoImage() {
 
     const data = new FormData();
 
+    console.log(selectedFiles)
     selectedFiles.forEach((file) => data.append("file", file));
 
     axios
-      .post("http://192.168.1.107:8000/upload_image", data, {
+      .post("http://localhost:8000/upload_image", data, {
         onUploadProgress: (ProgressEvent) => {
           console.log(
             "progresss: ",
@@ -34,9 +34,10 @@ function NoImage() {
       })
       .then((res) => {
         console.log(res.status);
+        if (res.status === 200) { 
+          props.handler()
+        }
       });
-
-    console.log("sent");
 
     setUploadingProgress(0);
   }

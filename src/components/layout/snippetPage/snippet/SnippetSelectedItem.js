@@ -5,7 +5,16 @@ import {
   SnippetDropdown,
   SnippetSlider,
   SnippetBoolean,
+  SnippetSizeOrPoint,
 } from "./snippetComponents/selectedSnippetParts";
+
+// parts = {
+//   "dropdown": SnippetDropdown,
+//   "int": SnippetSlider,
+//   "float": SnippetSlider,
+//   "Point": SnippetSizeOrPoint,
+//   "Size": SnippetSizeOrPoint,
+// };
 
 function SnippetSelectedItem(props) {
   const params = props.item.signature;
@@ -14,14 +23,18 @@ function SnippetSelectedItem(props) {
   params.map((param) => {
     const part = param.var_type.split(":")[0];
 
-    const argID = [props.item.selected_id, param.param_no].join('#')
+    const argID = [props.item.selected_id, param.param_no].join("#");
+
+    const childParams = { argID, ...param };
 
     if (part === "dropdown") {
-      children.push(SnippetDropdown({argID, ...param}));
-    } else if (part === "int" || part === "float") {
-      children.push(SnippetSlider(param));
+      children.push(SnippetDropdown(childParams));
+    } else if (part === "int" || part === "double") {
+      children.push(SnippetSlider(childParams));
     } else if (part === "bool") {
-      children.push(SnippetBoolean(param));
+      children.push(SnippetBoolean(childParams));
+    } else if (part === "Point" || part === "Size") {
+      children.push(SnippetSizeOrPoint(childParams));
     }
   });
 

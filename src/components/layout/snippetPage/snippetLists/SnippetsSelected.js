@@ -20,6 +20,9 @@ function SnippetsSelected() {
     snippets.push(snippet);
   }
 
+  console.log('selected')
+  console.log(selectedContext.selected.length)
+
   if (selectedContext.selected.length === 0) {
     content = <p>Nothing selected yet, add from library to get started...</p>;
   } else {

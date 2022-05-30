@@ -7,30 +7,27 @@
 }
 
 .arg_setup h3{
-  font-size: 1.05em;
+  font-size: 0.85em;
   padding: 0px;
   margin: 3px;
   line-height: 100%;
+  margin: 0;
 }
 
 .arg_setup ul {
   align-items: center;
   display: flex;
-  justify-content:space-evenly;
-}
-
-.boolean {
+  justify-content:space-between;
 }
 
 .boolean input {
-
   position: relative;
   top: 0;
 }
 
 .dropdown select {
-  font-size: 0.8em;
-  width: 10em;
+  font-size: 0.7em;
+  width: 15em;
 }
 
 .slider ul {
@@ -49,9 +46,31 @@ input::-webkit-inner-spin-button {
 }
 
 .slider input[type=number] {
-  font-size: 0.8em;
+  font-size: 0.7em;
   margin: 3px;
   width: 3em;
   height: 1.8em;
+  border: 1px solid black;
+}
+
+.slider input:disabled {
+  opacity: 0.5;
+}
+
+.slider_error input[type=number]{
+  border: 1px solid red;
+  background-color: rgb(255, 204, 204);
+}
+
+.size_or_point ul{
+  display: flex;
+}
+
+.size_or_point input[type=number] {
+  width: 3em;
+  height: auto;
+  margin: 3px;
+  text-align: center;
+  font-size: 1em;
 }
 

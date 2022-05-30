@@ -7,19 +7,26 @@
 
 .library_snippet {
   background-color: var(--secondary-colour);
-  border-radius: 6px;
+  border-radius: 1px;
+  overflow-y: visible;
 }
 
 .selected_snippet {
   background-color: white;
   border-radius: 6px;
-  padding: 1px 0px;
+  padding: 1px 0;
+  overflow: hidden;
+}
+
+.selected_snippet div {
+  /* height: 100%; */
+  max-height: 5em;
 }
 
 .snippet_vars {
-  box-shadow: inset 0 0 8px #6969695b;
-  margin: 5px;
-  padding: 8px;
+  box-shadow: inset 0 0 6px #6969695b;
+  margin: 3px;
+  padding: 4px;
   border-radius: 6px;
   background-color: var(--tertiary-colour);
 }
@@ -40,6 +47,8 @@
 .header {
   display: flex;
   justify-content: space-between;
+  /* overflow: clip; */
+  overflow-y: hidden
 }
 
 .header ul {

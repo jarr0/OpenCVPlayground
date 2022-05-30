@@ -16,6 +16,16 @@
     ]
   },
   {
+    "name": "RetrievalModes",
+    "enums": [
+      { "name": "RETR_EXTERNAL", "code": "0" },
+      { "name": "RETR_LIST", "code": "1" },
+      { "name": "RETR_CCOMP", "code": "2" },
+      { "name": "RETR_TREE", "code": "3" },
+      { "name": "RETR_FLOODFILL", "code": "4" }
+    ]
+  },
+  {
     "name": "ColorConversionCodes",
     "enums": [
       {
@@ -122,7 +132,6 @@
       { "name": "COLOR_RGB2YUV", "code": "83" },
       { "name": "COLOR_YUV2BGR", "code": "84" },
       { "name": "COLOR_YUV2RGB", "code": "85" },
-      { "name": "//!", "code": "4:2:0" },
       { "name": "COLOR_YUV2RGB_NV12", "code": "90" },
       { "name": "COLOR_YUV2BGR_NV12", "code": "91" },
       {
@@ -210,8 +219,6 @@
         "code": "108",
         "equivalent": ["COLOR_YUV2BGR_Y422", "COLOR_YUV2BGR_UYNV"]
       },
-      { "name": "//COLOR_YUV2RGB_VYUY", "code": "109" },
-      { "name": "//COLOR_YUV2BGR_VYUY", "code": "110" },
       {
         "name": "COLOR_YUV2RGBA_UYVY",
         "code": "111",
@@ -222,8 +229,6 @@
         "code": "112",
         "equivalent": ["COLOR_YUV2BGRA_Y422", "COLOR_YUV2BGRA_UYNV"]
       },
-      { "name": "//COLOR_YUV2RGBA_VYUY", "code": "113" },
-      { "name": "//COLOR_YUV2BGRA_VYUY", "code": "114" },
       {
         "name": "COLOR_YUV2RGB_YUY2",
         "code": "115",
@@ -262,7 +267,6 @@
           "COLOR_YUV2GRAY_YUNV"
         ]
       },
-      { "name": "//CV_YUV2GRAY_VYUY", "code": "CV_YUV2GRAY_UYVY" },
       { "name": "COLOR_RGBA2mRGBA", "code": "125" },
       { "name": "COLOR_mRGBA2RGBA", "code": "126" },
       {
@@ -391,5 +395,44 @@
       },
       { "name": "COLOR_COLORCVT_MAX", "code": "143" }
     ]
-  }
+  },
+  {
+    "name": "AdaptiveThresholdTypes",
+    "enums": [
+      { "name": "ADAPTIVE_THRESH_MEAN_C", "code": "0" },
+      { "name": "ADAPTIVE_THRESH_GAUSSIAN_C", "code": "1" }
+    ]
+  },
+  {
+    "name": "ContourApproximationModes",
+    "enums": [
+      { "name": "CHAIN_APPROX_NONE", "code": "1" },
+      { "name": "CHAIN_APPROX_SIMPLE", "code": "2" },
+      { "name": "CHAIN_APPROX_TC89_L1", "code": "3" },
+      { "name": "CHAIN_APPROX_TC89_KCOS", "code": "4" }
+    ]
+  },
+  {
+    "name": "LineTypes",
+    "enums": [
+      { "name": "FILLED", "code": "-1" },
+      { "name": "LINE_4", "code": "4" },
+      { "name": "LINE_8", "code": "8" },
+      { "name": "LINE_AA", "code": "16" }
+    ]
+  },
+  {
+    "name": "ThresholdTypes",
+    "enums": [
+      { "name": "THRESH_BINARY", "code": "0" },
+      { "name": "THRESH_BINARY_INV", "code": "1" },
+      { "name": "THRESH_TRUNC", "code": "2" },
+      { "name": "THRESH_TOZERO", "code": "3" },
+      { "name": "THRESH_TOZERO_INV", "code": "4" },
+      { "name": "THRESH_MASK", "code": "7" },
+      { "name": "THRESH_OTSU", "code": "8" },
+      { "name": "THRESH_TRIANGLE", "code": "16" }
+    ]
+  },
+  { "name": "THRESH_BINARY" }
 ]

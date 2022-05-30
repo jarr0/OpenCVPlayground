@@ -5,6 +5,7 @@ import move_to_top from "./chevrons-up.svg"
 import move_down from "./chevron-down.svg"
 import move_to_bottom from "./chevrons-down.svg"
 import trash from "./trash.svg"
+import play from "./play.svg"
 
 export {
   add,
@@ -13,5 +14,6 @@ export {
   move_to_top,
   move_down,
   move_to_bottom,
-  trash
+  trash,
+  play,
 }

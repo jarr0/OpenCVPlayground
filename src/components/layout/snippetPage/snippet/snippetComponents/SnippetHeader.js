@@ -1,4 +1,5 @@
 import classes from "./Snippet.module.css";
+import ReactTooltip from "react-tooltip";
 
 import {
   add,
@@ -16,7 +17,7 @@ function SnippetHeader(props) {
       <h2>{props.item.func_name}</h2>
       <ul className={classes.library_controls}>
         <li>
-          <a href={props.item.docs} target="_blank">
+          <a href={props.item.docs} target="">
             <img src={help} alt="Show snippet docs" />{" "}
           </a>
         </li>
@@ -28,9 +29,22 @@ function SnippetHeader(props) {
     </div>
   );
 
+  const desc = props.item.long_description
+
   const selected_controls = (
     <div className={classes.header}>
-      <h2>{props.item.func_name}</h2>
+      <ul>
+        <li>
+          <h2>{props.item.func_name} ‎</h2>
+        </li>
+        <li>
+          <a data-tip="helo">
+            <img src={help} alt="" />
+          </a>
+          <ReactTooltip place="right" effect="solid" aria-haspopup='true'/>
+            
+        </li>
+      </ul>
       <ul className={classes.selected_controls}>
         <li>
           <img src={trash} alt="Delete snippet" />

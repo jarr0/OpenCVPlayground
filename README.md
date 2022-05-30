@@ -1,73 +1,27 @@
-# Getting Started with Create React App
+# OpenCV Playground
+# Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](example.gif)
 
-## Available Scripts
+# About
+OpenCV Playground is designed to make OpenCV easy for anyone. By uploading an image and choosing from a pregenerated snippet the user can change parameters and view in real time how they effect the output. This is made possible by live python generation in the backend. 
 
-In the project directory, you can run:
+The inspiration from this proejct came from the way numerous online tutorials went about showing how to get started. They would use multiple different filters then have them all open in separate windows. I found this slow, and if the user wanted to see what different parameters did it felt clunky.
+# Technologies used
+- Python 3
+- OpenCV
+- Node.js
+- React.js
+- Express.js
 
-### `npm start`
+# Setup 
+1. Download or clone the repo 
+2. run `nmp install`
+3. Ensure Python3 and OpenCV is installed
+    - **Conda usage example:** 
+        - `conda create -n opencv_pg python=3.8`
+        - `conda activate opencv_pg`
+        - `pip install opencv-python`
+4. run `npm start`
+5. navigate to local server: [http://localhost:3000](http://localhost:3000)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### Helped out
-https://programmingwithmosh.com/javascript/react-file-upload-proper-server-side-nodejs-easy/

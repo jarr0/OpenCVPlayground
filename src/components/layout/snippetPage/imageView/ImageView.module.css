@@ -4,12 +4,6 @@
   
 }
 
-
-/* .setup button {
-  position: absolute;
-  align-items: center;
-}
-
 .image {
   height: 100%;
   width: 100%;
@@ -18,6 +12,7 @@
 }
 
 .image img {
+  /* filter: grayscale(50%); */
   position: absolute;
   max-width: 100%;
   max-height: 100%;
@@ -28,4 +23,14 @@
   bottom: 0;
   left: 0;
   right: 0;
-} */
+}
+
+.image_loading img {
+  filter: grayscale(20%)
+}
+
+.overlay img {
+  width: 100%; /* Full width (cover the whole page) */
+  height: auto; /* Full height (cover the whole page) */
+  background-color: rgba(0,0,0, 0.5);
+}

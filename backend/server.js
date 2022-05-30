@@ -53,10 +53,10 @@ app.use(express.json())
 
 var imageStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "images")
+    cb(null, ".")
   },
   filename: (req, file, cb) => {
-    cb(null, "image.jpg")
+    cb(null, "base_image.jpg")
   },
 })
 
@@ -80,21 +80,21 @@ app.get("/get_config", (req, res) => {
   }
 })
 
-// var imageUpload = multer({ storage: imageStorage }).array("file");
 var imageUpload = multer({ storage: imageStorage }).single("file")
 var jsonUpload = multer({ storage: jsonStorage }).single("file")
 
 app.get("/get_image", (req, res) => {
-  customImageExists = fs.existsSync("./ocvGen/custom.jpg")
-  imageExists = fs.existsSync("./images/image.jpg")
+  customImageExists = fs.existsSync("./custom.jpg")
+  imageExists = fs.existsSync("./base_image.jpg")
+
 
   if (customImageExists) {
     // when the base image has been edited
-    res.sendFile("ocvGen/custom.jpg", { root: __dirname })
+    res.sendFile("custom.jpg", { root: __dirname })
   } else {
     // only if image has been uploaded, but not modified
     if (imageExists) {
-      res.sendFile("images/image.jpg", { root: __dirname })
+      res.sendFile("base_image.jpg", { root: __dirname })
     } else {
       res.status(204)
       res.send()
@@ -131,6 +131,7 @@ app.post("/refresh_image", async (req, res) => {
     } else {
       generateCode()
         .then((value) => {
+          console.log(value)
           res.sendStatus(200)
         })
         .catch((err) => {
@@ -149,7 +150,7 @@ app.get("/config_exists", (req, res) => {
 })
 
 async function generateCode() {
-  var process = spawn("python3", ["./ocvGen/execute.py"])
+  var process = spawn("python", ["./ocvGen/execute.py"])
 
   let stdOut = ""
   let stdErr = ""
